@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ewt026by1vx"]
+
+[ext_resource type="Script" uid="uid://bi0nbdxuetagx" path="res://empire.gd" id="1_112p8"]
+[ext_resource type="Script" uid="uid://habjyb0xh1a4" path="res://galaxy.gd" id="2_bss38"]
+
+[node name="Node" type="Node"]
+
+[node name="Empires" type="Node" parent="."]
+
+[node name="[Empire]" type="Node" parent="Empires"]
+script = ExtResource("1_112p8")
+
+[node name="Galaxy" type="Node" parent="."]
+script = ExtResource("2_bss38")
