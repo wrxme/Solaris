@@ -6,13 +6,13 @@ var systems : Array
 var connections : Array
 
 # automatically called by Godot on start :)
-func _ready() -> void:
-	generate_galaxy(100)
+func generate_galaxy(n_stars : int) -> void:
+	generate_stars(n_stars)
 	generate_system_connections()
-	queue_redraw()
+	update_connections_within_systems()
 
 # Generate n_stars number of solar systems
-func generate_galaxy(n_stars : int) -> void:
+func generate_stars(n_stars : int) -> void:
 	for i in range(0, n_stars):
 		var s = SolarSystem.new()
 		s.id = i
@@ -43,7 +43,7 @@ func generate_system_connections() -> void:
 		
 		# check every connection to find the shortest one
 		for i in unconnected_stars:
-			var dist = (c.position - i.position).length()
+			var dist = c.position.distance_to(i.position)
 			
 			if dist < nearest_star_distance:
 				nearest_star = i
@@ -54,10 +54,7 @@ func generate_system_connections() -> void:
 		connected_stars.append(nearest_star)
 		unconnected_stars.erase(nearest_star)
 
-# draw all of the graphics
-# called by queue_redraw()
-func _draw() -> void:
-	for c in connections:
-		draw_line(c[0].position,c[1].position,Color.ALICE_BLUE,2.0)
-	for s in systems:
-		draw_circle(s.position,5,Color.YELLOW,true)
+func update_connections_within_systems() -> void:
+	for i in connections:
+		i[0].add_connection(i[1])
+		i[1].add_connection(i[0])

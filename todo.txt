@@ -1,0 +1,8 @@
+
+priority:
+- fix solar system connection algorithm
+
+other:
+- game clock
+- resource generation
+- empires
