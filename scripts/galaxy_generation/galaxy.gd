@@ -2,19 +2,26 @@
 extends Node2D
 class_name Galaxy
 
-var min_dist = 50
-
 var systems : Array
 var connections : Array
 
-# the master function
-func generate_galaxy(n_stars : int, size : Vector4i) -> void:
-	generate_stars(n_stars, size)
-	generate_system_connections()
+func _init(gen_settings : GalaxyGenerationSettings) -> void:
+	generate_galaxy(gen_settings)
+
+func generate_galaxy(gen_settings : GalaxyGenerationSettings) -> void:
+	generate_stars(
+		gen_settings.number_of_stars, 
+		gen_settings.galaxy_size, 
+		gen_settings.min_dist_between_stars
+	)
+	generate_system_connections(
+		gen_settings.bonus_link_percentage,
+		gen_settings.max_system_connections,
+		gen_settings.max_bonus_link_length
+	)
 	update_connections_within_systems()
 
-# Generate n_stars number of solar systems
-func generate_stars(n_stars : int, size : Vector4i) -> void:
+func generate_stars(n_stars : int, size : Vector4i, min_dist : float) -> void:
 	for i in range(0, n_stars):
 		var s = SolarSystem.new()
 		add_child(s)
@@ -41,7 +48,8 @@ func generate_stars(n_stars : int, size : Vector4i) -> void:
 				s.position = new_pos
 				flag = false
 
-func generate_system_connections() -> void:
+# This function is still kind of cooked
+func generate_system_connections(bonus_link_percentage : float, max_system_connections : int, max_bonus_link_length : float) -> void:
 	var possible_connections : Dictionary = {}
 	
 	# get every possible connection and its length
@@ -90,15 +98,15 @@ func generate_system_connections() -> void:
 	# add 5% of connections back
 	var bonus_connections := 0
 	for i in range(sorted_paths.size() - bonus_connections):
-		if bonus_connections > ceil(0.15 * (sorted_paths.size() - added_connections)):
+		if bonus_connections > ceil(bonus_link_percentage * (sorted_paths.size() - added_connections)):
 			break
 		
 		if sorted_paths[i] in connections:
 			continue
 		
 		var dist = sorted_paths[i][0].position.distance_to(sorted_paths[i][1].position)
-		if dist < 300.0:
-			if c_atlas[sorted_paths[i][0].id] < 3 and c_atlas[sorted_paths[i][1].id] < 3:
+		if dist < max_bonus_link_length:
+			if c_atlas[sorted_paths[i][0].id] < max_system_connections and c_atlas[sorted_paths[i][1].id] < max_system_connections:
 				connections.append(sorted_paths[i])
 				bonus_connections += 1
 				

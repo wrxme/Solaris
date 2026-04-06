@@ -1,6 +1,10 @@
-# time_controller.gd
+# time_manager.gd
 extends Node
 class_name GameTimer
+
+signal new_month
+signal new_year
+signal tick
 
 @export var start_time : int = 0
 var speed_factor : float = 1.0
@@ -13,7 +17,7 @@ var day : int = 0
 
 var ui : Label
 
-func initialize(time_txt : Label = null):
+func _init(time_txt : Label = null) -> void:
 	time = start_time
 	
 	@warning_ignore("integer_division")
@@ -40,9 +44,12 @@ func _process(delta: float):
 	if timer >= interval:
 		time += 1
 		timer -= interval
-		tick()
+		_tick()
 
-func tick():
+func _tick():
+	var prev_month := month
+	var prev_year := year
+	
 	@warning_ignore("integer_division")
 	year = (time / 360) + 2500
 	var days_left_in_year : int = time % 360
@@ -51,9 +58,19 @@ func tick():
 	month = (days_left_in_year / 30) + 1
 	day = (days_left_in_year % 30) + 1
 	
+	if prev_month != month:
+		new_month.emit()
+	if prev_year	 != year:
+		new_year.emit()
+	
 	if ui:
 		update_ui()
+	
+	tick.emit()
 
+# It is not ideal to have the game time manager directly modify UI.
+# we should eventually create a UI manager that subscribes to the tick signal
+# and updates the text. The game time manager should only worry about time.
 func update_ui():
 	var output = str(year) + "." + "%02d" % month + "." + "%02d" % day
 	ui.text = output

@@ -1,9 +1,10 @@
 
 priority:
 - fix solar system connection algorithm
+	I feel like it's pretty close to good but it's just feels slightly
+	off you know? could def be more efficient too
 
 other:
 - solar system generation
-- game clock
 - resource generation
 - empires
