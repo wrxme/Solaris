@@ -3,3 +3,5 @@ res://scripts/solarsystem.gd
 res://assets/scenes/galaxy.tscn
 res://scripts/game_manager.gd
 res://assets/scenes/game.tscn
+res://todo.txt
+res://union.gd
