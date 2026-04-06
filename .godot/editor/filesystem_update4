@@ -5,3 +5,6 @@ res://scripts/game_manager.gd
 res://assets/scenes/game.tscn
 res://todo.txt
 res://union.gd
+res://scripts/time_controller.gd
+res://input_manager.gd
+res://scripts/input_manager.gd

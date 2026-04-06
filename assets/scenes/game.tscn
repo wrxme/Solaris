@@ -5,3 +5,26 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_cb66b")
 number_of_stars = 50
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 626.0
+offset_right = 117.0
+offset_bottom = 649.0
+text = "SOLARIS v0.0.1"
+
+[node name="Time" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 625.0
+offset_right = 1148.0
+offset_bottom = 648.0
+text = "00/00/0000"
+horizontal_alignment = 2

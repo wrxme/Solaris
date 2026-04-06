@@ -3,6 +3,7 @@ priority:
 - fix solar system connection algorithm
 
 other:
+- solar system generation
 - game clock
 - resource generation
 - empires
