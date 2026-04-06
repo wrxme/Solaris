@@ -5,6 +5,7 @@ class_name GameManager
 @export var galaxy_generation_settings : GalaxyGenerationSettings
 
 @onready var time_txt = $UI/Time
+@onready var system_txt = $UI/sys
 
 var galaxy : Galaxy
 var game_timer : GameTimer
@@ -78,12 +79,16 @@ func on_left_pressed() -> void:
 		focus = galaxy.systems.size() - 1
 	else:
 		focus -= 1
+	
+	system_txt.text = "Selected System: " + str(focus)
 
 func on_right_pressed() -> void:
 	if focus == galaxy.systems.size() - 1:
 		focus = 0
 	else:
 		focus += 1
+	
+	system_txt.text = "Selected System: " + str(focus)
 
 func on_enter_pressed() -> void:
 	galaxy_view = !galaxy_view
