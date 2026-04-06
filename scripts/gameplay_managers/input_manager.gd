@@ -5,6 +5,7 @@ signal pressed_pause
 signal pressed_left
 signal pressed_right
 signal pressed_enter
+signal pressed_refresh
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
@@ -18,4 +19,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("enter"):
 		pressed_enter.emit()
+		return
+	if event.is_action_pressed("Refresh"):
+		pressed_refresh.emit()
 		return

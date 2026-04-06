@@ -5,7 +5,7 @@ class_name World
 var type : String = "unknown"
 var size : float
 var distance_from_center : float
-var color : Color
+var color : Color = Color.DEEP_SKY_BLUE
 var speed := 50.0
 var angle : float = 0.0
 var radius : float = 0.0

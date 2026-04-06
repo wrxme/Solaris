@@ -20,9 +20,6 @@ var focus : int = 0
 func _ready() -> void:
 	# create game components
 	startup_game()
-	
-	# render
-	queue_redraw()
 
 func startup_game() -> void:
 	# create input manger
