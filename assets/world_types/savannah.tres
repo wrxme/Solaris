@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://tlc1kk44ue8s"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_ltsph"]
+
+[resource]
+script = ExtResource("1_ltsph")
+name = "Savannah"
+size_range = Vector2(5, 15)
+color = Color(0.74509805, 0.7058824, 0.16470589, 1)
+planet_zone = 1
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

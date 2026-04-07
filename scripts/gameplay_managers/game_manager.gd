@@ -21,6 +21,20 @@ var focus : int = 0
 func _ready() -> void:
 	# create game components
 	startup_game()
+	
+	print(str(galaxy.systems.size()) + " systems generated")
+	
+	var w := 0
+	var h := 0
+	for i in galaxy.systems:
+		for j in i.worlds:
+			w += 1
+			if j.world_type.planet_zone == WorldType.SpawnZone.HABITABLE:
+				h += 1
+	
+	print(str(w) + " worlds generated")
+	print(str(h) + " habitable worlds generated")
+	
 
 func startup_game() -> void:
 	# create input manger

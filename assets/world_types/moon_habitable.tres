@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://ok3r32j6whgk"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_6usgf"]
+
+[resource]
+script = ExtResource("1_6usgf")
+name = "Habitable Moon"
+size_range = Vector2(3, 8)
+color = Color(0.22930562, 0.87142706, 0.7420107, 1)
+planet_zone = 4
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

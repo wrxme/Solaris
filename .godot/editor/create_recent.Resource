@@ -1,0 +1,2 @@
+WorldType
+StarType
