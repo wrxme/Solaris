@@ -29,11 +29,11 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 	# Star's Planet Zones
 	var dist = star_type.size + 10
 	var lum_scale = sqrt(star_type.luminosity)
-	var scortch_distance = dist + (star_type.scortch_zone_size * lum_scale)
-	var inner_distance = scortch_distance + (star_type.inner_zone_size * lum_scale)
+	var scorch_distance = dist + (star_type.scorch_zone_size * lum_scale)
+	var inner_distance = scorch_distance + (star_type.inner_zone_size * lum_scale)
 	var hab_distance = inner_distance + (star_type.habitable_zone_size * lum_scale)
 	
-	var scortched_worlds := fetch_world_types(world_types,WorldType.SpawnZone.SCORCH)
+	var scorched_worlds := fetch_world_types(world_types,WorldType.SpawnZone.SCORCH)
 	var inner_worlds := fetch_world_types(world_types,WorldType.SpawnZone.INNER)
 	var habitable_worlds := fetch_world_types(world_types,WorldType.SpawnZone.HABITABLE)
 	var frozen_worlds := fetch_world_types(world_types,WorldType.SpawnZone.FROZEN)
@@ -43,8 +43,8 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 		
 		# Depending on the distance from the star, decide plaent type
 		var world_type : WorldType
-		if dist < scortch_distance:
-			world_type = scortched_worlds[randi_range(0,scortched_worlds.size() - 1)].duplicate()
+		if dist < scorch_distance:
+			world_type = scorched_worlds[randi_range(0,scorched_worlds.size() - 1)].duplicate()
 		elif dist < inner_distance:
 			world_type = inner_worlds[randi_range(0,inner_worlds.size() - 1)].duplicate()
 		elif dist < hab_distance:

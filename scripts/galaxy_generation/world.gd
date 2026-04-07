@@ -50,9 +50,3 @@ func _physics_process(delta: float) -> void:
 			) * radius
 		
 		position = new_pos
-
-func determine_color():
-	if type == "star":
-		color = Color.YELLOW
-	elif type == "moon":
-		color = Color.YELLOW_GREEN
