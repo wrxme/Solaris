@@ -11,6 +11,10 @@ class_name GalaxyGenerationSettings
 @export var bonus_link_percentage : float = 0.03
 @export var max_bonus_link_length : float = 300.0
 
+@export_group("Worlds")
+@export var star_types : Array[StarType]
+@export var world_types : Array[WorldType]
+
 @export_group("Visuals")
 @export var star_color : Color = Color.YELLOW
 @export var star_radius : float = 5.0

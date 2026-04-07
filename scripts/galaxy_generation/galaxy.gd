@@ -9,11 +9,7 @@ func _init(gen_settings : GalaxyGenerationSettings) -> void:
 	generate_galaxy(gen_settings)
 
 func generate_galaxy(gen_settings : GalaxyGenerationSettings) -> void:
-	generate_stars(
-		gen_settings.number_of_stars, 
-		gen_settings.galaxy_size, 
-		gen_settings.min_dist_between_stars
-	)
+	generate_stars(gen_settings)
 	generate_system_connections(
 		gen_settings.bonus_link_percentage,
 		gen_settings.max_system_connections,
@@ -21,14 +17,17 @@ func generate_galaxy(gen_settings : GalaxyGenerationSettings) -> void:
 	)
 	update_connections_within_systems()
 
-func generate_stars(n_stars : int, size : Vector4i, min_dist : float) -> void:
-	for i in range(0, n_stars):
-		var s = SolarSystem.new()
+func generate_stars(gen_settings : GalaxyGenerationSettings) -> void:
+	for i in range(0, gen_settings.number_of_stars):
+		var s = SolarSystem.new(i, gen_settings.star_types, gen_settings.world_types)
 		add_child(s)
 		systems.append(s)
 		
-		s.id = i
-		s.position = Vector2(randi_range(size[0], size[1]), randi_range(size[2], size[3]))
+		var x_min = gen_settings.galaxy_size[0]
+		var x_max = gen_settings.galaxy_size[1]
+		var y_min = gen_settings.galaxy_size[2]
+		var y_max = gen_settings.galaxy_size[3]
+		s.position = get_random_star_position(x_min,x_max,y_min,y_max)
 		
 		# Ensure stars can't be placed too close to each other
 		var flag: bool = true
@@ -36,17 +35,22 @@ func generate_stars(n_stars : int, size : Vector4i, min_dist : float) -> void:
 		var attempts: int = 0
 		while flag and attempts < max_attempts:
 			attempts += 1
-			var new_pos = Vector2(randi_range(size[0], size[1]), randi_range(size[2], size[3]))
+			var new_pos = get_random_star_position(x_min,x_max,y_min,y_max)
 			   
 			var is_valid = true
 			for j in systems:
-				if j.position.distance_to(new_pos) < min_dist:
+				if j.position.distance_to(new_pos) < gen_settings.min_dist_between_stars:
 					is_valid = false
 					break
 			
 			if is_valid:
 				s.position = new_pos
 				flag = false
+
+func get_random_star_position(x_min:float,x_max:float,y_min:float,y_max:float) -> Vector2:
+	var x_pos = randf_range(x_min, x_max)
+	var y_pos = randf_range(y_min, y_max)
+	return(Vector2(x_pos,y_pos))
 
 # This function is still kind of cooked
 func generate_system_connections(bonus_link_percentage : float, max_system_connections : int, max_bonus_link_length : float) -> void:

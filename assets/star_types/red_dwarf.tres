@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StarType" load_steps=2 format=3 uid="uid://d4fs0nd50y21u"]
+
+[ext_resource type="Script" uid="uid://c0n7xbpmoevwv" path="res://scripts/types/star_type.gd" id="1_neesx"]
+
+[resource]
+script = ExtResource("1_neesx")
+luminosity = 0.4
+scortch_zone_size = 60
+inner_zone_size = 20
+habitable_zone_size = 30
+name = "Red Dwarf"
+size_range = Vector2(15, 20)
+color = Color(1, 0, 0, 1)
+metadata/_custom_type_script = "uid://c0n7xbpmoevwv"

@@ -14,23 +14,56 @@ var owned_by : int
 var worlds : Array
 var star : World
 
-func _init() -> void:
-	generate_system()
+func _init(_id : int, star_types : Array[StarType], world_types : Array[WorldType]) -> void:
+	id = _id
+	generate_system(star_types, world_types)
 
-func generate_system() -> void:
+func generate_system(star_types : Array[StarType], world_types : Array[WorldType]) -> void:
 	# Create the star
-	star = World.new("star", 30.0, 0)
+	var star_type : StarType = star_types[randi_range(0,star_types.size() - 1)].duplicate()
+	star_type.size = 1.5 * randf_range(star_type.size_range[0],star_type.size_range[1])
+	star = World.new(star_type)
 	add_child(star)
 	worlds.append(star)
 	
-	var dist = 10
-	while dist < 400:
-		dist += randf_range(45,150)
+	# Star's Planet Zones
+	var dist = star_type.size + 10
+	var lum_scale = sqrt(star_type.luminosity)
+	var scortch_distance = dist + (star_type.scortch_zone_size * lum_scale)
+	var inner_distance = scortch_distance + (star_type.inner_zone_size * lum_scale)
+	var hab_distance = inner_distance + (star_type.habitable_zone_size * lum_scale)
+	
+	var scortched_worlds := fetch_world_types(world_types,WorldType.SpawnZone.SCORCH)
+	var inner_worlds := fetch_world_types(world_types,WorldType.SpawnZone.INNER)
+	var habitable_worlds := fetch_world_types(world_types,WorldType.SpawnZone.HABITABLE)
+	var frozen_worlds := fetch_world_types(world_types,WorldType.SpawnZone.FROZEN)
+	
+	while dist < 10 * star.size:
+		dist += randf_range(45,200)
 		
-		var size = randf_range(8,20)
-		var w = World.new("Unknown", size, dist)
+		# Depending on the distance from the star, decide plaent type
+		var world_type : WorldType
+		if dist < scortch_distance:
+			world_type = scortched_worlds[randi_range(0,scortched_worlds.size() - 1)].duplicate()
+		elif dist < inner_distance:
+			world_type = inner_worlds[randi_range(0,inner_worlds.size() - 1)].duplicate()
+		elif dist < hab_distance:
+			world_type = habitable_worlds[randi_range(0,habitable_worlds.size() - 1)].duplicate()
+		else:
+			world_type = frozen_worlds[randi_range(0,frozen_worlds.size() - 1)].duplicate()
+		
+		world_type.size = randf_range(world_type.size_range[0],world_type.size_range[1])
+		dist += world_type.size
+		var w = World.new(world_type, dist)
 		add_child(w)
 		worlds.append(w)
+
+func fetch_world_types(world_types : Array[WorldType], type : WorldType.SpawnZone) -> Array[WorldType]:
+	var output : Array[WorldType] = []
+	for i in world_types:
+		if i.planet_zone == type:
+			output.append(i)
+	return output
 
 func add_connection(endpoint : SolarSystem) -> void:
 	connections.append(endpoint)
