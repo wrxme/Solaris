@@ -39,3 +39,4 @@ res://assets/world_types/desert.tres
 res://assets/world_types/tundra.tres
 res://assets/world_types/moon_uninhabitable.tres
 res://assets/world_types/barren.tres
+res://scripts/gameplay_managers/render_manager.gd
