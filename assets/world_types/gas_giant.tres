@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://cmbvon2x1i2qx"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_dgoep"]
+
+[resource]
+script = ExtResource("1_dgoep")
+name = "Gas Giant"
+size_range = Vector2(10, 30)
+color = Color(0.7803848, 0.72201, 0.91422284, 1)
+planet_zone = 3
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

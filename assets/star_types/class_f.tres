@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_6ifrt")
 luminosity = 0.8
+scortch_zone_size = 90
+inner_zone_size = 50
+habitable_zone_size = 90
 name = "Class F"
 size_range = Vector2(25, 30)
 color = Color(1, 0.6, 0, 1)

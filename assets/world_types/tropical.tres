@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://bxlacpjg8tbut"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_t2mcr"]
+
+[resource]
+script = ExtResource("1_t2mcr")
+name = "Tropical"
+size_range = Vector2(7, 20)
+color = Color(8.735731e-06, 0.71792287, 1.92523e-07, 1)
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

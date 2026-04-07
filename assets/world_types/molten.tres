@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://cmc7itggtrfgk"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_3byds"]
+
+[resource]
+script = ExtResource("1_3byds")
+name = "Molten"
+size_range = Vector2(5, 20)
+color = Color(0.86749244, 0.29906216, 0, 1)
+planet_zone = 0
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

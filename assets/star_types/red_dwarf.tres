@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_neesx")
 luminosity = 0.4
+scortch_zone_size = 60
+inner_zone_size = 20
+habitable_zone_size = 30
 name = "Red Dwarf"
 size_range = Vector2(15, 20)
 color = Color(1, 0, 0, 1)

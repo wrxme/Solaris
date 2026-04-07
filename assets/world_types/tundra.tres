@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://yjdeosd30yrv"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_giq11"]
+
+[resource]
+script = ExtResource("1_giq11")
+name = "Tundra"
+size_range = Vector2(7, 20)
+color = Color(0.4908883, 0.9849656, 0.8882836, 1)
+planet_zone = 3
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

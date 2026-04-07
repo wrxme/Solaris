@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://crrebuj6lufda"]
+[gd_scene load_steps=26 format=3 uid="uid://crrebuj6lufda"]
 
 [ext_resource type="Script" uid="uid://bhbsx3bfc2ppj" path="res://scripts/gameplay_managers/game_manager.gd" id="1_cb66b"]
 [ext_resource type="Script" uid="uid://b13nlhuidy8o4" path="res://scripts/utils/galaxy_generation_settings.gd" id="2_dis88"]
@@ -12,14 +12,28 @@
 [ext_resource type="Resource" uid="uid://d2w88il8g6la6" path="res://assets/star_types/red_giant.tres" id="10_5jdip"]
 [ext_resource type="Resource" uid="uid://rxq534gcu5ae" path="res://assets/star_types/white_dwarf.tres" id="11_3cnnv"]
 [ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="12_pkhv0"]
+[ext_resource type="Resource" uid="uid://cu32ufyyvxdme" path="res://assets/world_types/arctic.tres" id="13_fx2rd"]
+[ext_resource type="Resource" uid="uid://bet6fofqn6s4m" path="res://assets/world_types/barren.tres" id="14_jdjof"]
+[ext_resource type="Resource" uid="uid://ca8pg5tncckj5" path="res://assets/world_types/continental.tres" id="15_h5j7u"]
+[ext_resource type="Resource" uid="uid://dhudkg0lgwu21" path="res://assets/world_types/desert.tres" id="16_8vm3o"]
+[ext_resource type="Resource" uid="uid://cmbvon2x1i2qx" path="res://assets/world_types/gas_giant.tres" id="17_p2xyf"]
+[ext_resource type="Resource" uid="uid://cmc7itggtrfgk" path="res://assets/world_types/molten.tres" id="18_xe33q"]
+[ext_resource type="Resource" uid="uid://ok3r32j6whgk" path="res://assets/world_types/moon_habitable.tres" id="19_1q3k2"]
+[ext_resource type="Resource" uid="uid://buek5jiqt3l3x" path="res://assets/world_types/moon_uninhabitable.tres" id="20_4hayi"]
+[ext_resource type="Resource" uid="uid://clw60ef58anvi" path="res://assets/world_types/ocean.tres" id="21_tcehl"]
+[ext_resource type="Resource" uid="uid://tlc1kk44ue8s" path="res://assets/world_types/savannah.tres" id="22_c7jqk"]
+[ext_resource type="Resource" uid="uid://bxlacpjg8tbut" path="res://assets/world_types/tropical.tres" id="23_3sk60"]
+[ext_resource type="Resource" uid="uid://yjdeosd30yrv" path="res://assets/world_types/tundra.tres" id="24_lx1sk"]
 
 [sub_resource type="Resource" id="Resource_5gf0t"]
 script = ExtResource("2_dis88")
 galaxy_size = Vector4(30, 1890, 30, 1050)
 number_of_stars = 120
 min_dist_between_stars = 75.0
+bonus_link_percentage = 0.015
 max_bonus_link_length = 500.0
 star_types = Array[ExtResource("3_phsto")]([ExtResource("4_pkhv0"), ExtResource("5_i358u"), ExtResource("6_s2rys"), ExtResource("7_fc420"), ExtResource("8_kc0sw"), ExtResource("9_fqk1v"), ExtResource("10_5jdip"), ExtResource("11_3cnnv")])
+world_types = Array[ExtResource("12_pkhv0")]([ExtResource("13_fx2rd"), ExtResource("14_jdjof"), ExtResource("15_h5j7u"), ExtResource("16_8vm3o"), ExtResource("17_p2xyf"), ExtResource("18_xe33q"), ExtResource("19_1q3k2"), ExtResource("20_4hayi"), ExtResource("21_tcehl"), ExtResource("22_c7jqk"), ExtResource("23_3sk60"), ExtResource("24_lx1sk")])
 star_radius = 6.0
 link_width = 3.0
 metadata/_custom_type_script = "uid://b13nlhuidy8o4"

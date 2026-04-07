@@ -4,6 +4,9 @@
 
 [resource]
 script = ExtResource("1_bjahn")
+scortch_zone_size = 120
+inner_zone_size = 60
+habitable_zone_size = 100
 name = "Class G"
 size_range = Vector2(25, 30)
 metadata/_custom_type_script = "uid://c0n7xbpmoevwv"

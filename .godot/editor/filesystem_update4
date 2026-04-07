@@ -27,3 +27,15 @@ res://assets/star_types/blue_giant.tres
 res://assets/star_types/white_dwarf.tres
 res://scripts/types/world_type.gd
 res://assets/world_types/classic.tres
+res://assets/world_types/molten.tres
+res://assets/world_types/savannah.tres
+res://assets/world_types/continental.tres
+res://assets/world_types/ocean.tres
+res://assets/world_types/tropical.tres
+res://assets/world_types/arctic.tres
+res://assets/world_types/gas_giant.tres
+res://assets/world_types/moon_habitable.tres
+res://assets/world_types/desert.tres
+res://assets/world_types/tundra.tres
+res://assets/world_types/moon_uninhabitable.tres
+res://assets/world_types/barren.tres

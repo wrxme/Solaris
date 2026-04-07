@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_kq8lp")
 luminosity = 0.6
+scortch_zone_size = 90
+inner_zone_size = 30
+habitable_zone_size = 0
 name = "Red Giant"
 size_range = Vector2(40, 45)
 color = Color(1, 0, 0, 1)

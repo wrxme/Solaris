@@ -5,7 +5,10 @@
 [resource]
 script = ExtResource("1_63caq")
 luminosity = 0.8
+scortch_zone_size = 40
+inner_zone_size = 40
+habitable_zone_size = 40
 name = "White Dwarf"
-size_range = Vector2(15, 20)
+size_range = Vector2(10, 15)
 color = Color(1, 1, 1, 1)
 metadata/_custom_type_script = "uid://c0n7xbpmoevwv"

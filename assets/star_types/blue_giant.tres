@@ -4,6 +4,9 @@
 
 [resource]
 script = ExtResource("1_p56v0")
+scortch_zone_size = 80
+inner_zone_size = 50
+habitable_zone_size = 150
 name = "Blue_giant"
 size_range = Vector2(40, 45)
 color = Color(0, 0.60784316, 1, 1)

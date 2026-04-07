@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://cu32ufyyvxdme"]
+
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_qwf41"]
+
+[resource]
+script = ExtResource("1_qwf41")
+name = "Arctic"
+size_range = Vector2(7, 20)
+color = Color(1, 1, 1, 1)
+planet_zone = 3
+metadata/_custom_type_script = "uid://ct5kmllr4nuls"

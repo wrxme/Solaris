@@ -3,6 +3,7 @@ extends Node2D
 class_name World
 
 var type : String = "unknown"
+var world_type : WorldType
 var size : float
 var distance_from_center : float
 var color : Color = Color.DEEP_SKY_BLUE
@@ -12,7 +13,9 @@ var radius : float = 0.0
 
 var worlds : Array
 
-func _init(world_type : WorldType, _distance:float = 0.0) -> void:
+func _init(_world_type : WorldType, _distance:float = 0.0) -> void:
+	world_type = _world_type
+	
 	if world_type is StarType:
 		pass
 	
@@ -23,6 +26,9 @@ func _init(world_type : WorldType, _distance:float = 0.0) -> void:
 	
 	position = Vector2(distance_from_center, 0)
 	color = world_type.color
+	
+	speed = randf_range(1,5)
+	angle = randf_range(0,200)
 	
 	#if type == "moon":
 		#radius = 35

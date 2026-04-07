@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_we6r0")
 luminosity = 5.0
+scortch_zone_size = 80
+inner_zone_size = 60
+habitable_zone_size = 100
 name = "Class A"
 size_range = Vector2(30, 35)
 color = Color(1, 1, 1, 1)
