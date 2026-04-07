@@ -55,7 +55,7 @@ offset_top = 1047.0
 offset_right = 153.0
 offset_bottom = 1075.0
 theme_override_font_sizes/font_size = 20
-text = "SOLARIS v0.0.1"
+text = "SOLARIS v0.0.2"
 
 [node name="Time" type="Label" parent="UI"]
 layout_mode = 0
