@@ -12,7 +12,9 @@ func generate_galaxy(gen_settings : GalaxyGenerationSettings) -> void:
 	generate_stars(
 		gen_settings.number_of_stars, 
 		gen_settings.galaxy_size, 
-		gen_settings.min_dist_between_stars
+		gen_settings.min_dist_between_stars,
+		gen_settings.star_types,
+		gen_settings.world_types
 	)
 	generate_system_connections(
 		gen_settings.bonus_link_percentage,
@@ -21,9 +23,9 @@ func generate_galaxy(gen_settings : GalaxyGenerationSettings) -> void:
 	)
 	update_connections_within_systems()
 
-func generate_stars(n_stars : int, size : Vector4i, min_dist : float) -> void:
+func generate_stars(n_stars : int, size : Vector4i, min_dist : float, star_types : Array[StarType], world_types : Array[WorldType]) -> void:
 	for i in range(0, n_stars):
-		var s = SolarSystem.new()
+		var s = SolarSystem.new(star_types, world_types)
 		add_child(s)
 		systems.append(s)
 		

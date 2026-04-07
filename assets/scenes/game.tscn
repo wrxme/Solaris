@@ -1,14 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://crrebuj6lufda"]
+[gd_scene load_steps=14 format=3 uid="uid://crrebuj6lufda"]
 
 [ext_resource type="Script" uid="uid://bhbsx3bfc2ppj" path="res://scripts/gameplay_managers/game_manager.gd" id="1_cb66b"]
 [ext_resource type="Script" uid="uid://b13nlhuidy8o4" path="res://scripts/utils/galaxy_generation_settings.gd" id="2_dis88"]
+[ext_resource type="Script" uid="uid://c0n7xbpmoevwv" path="res://scripts/types/star_type.gd" id="3_phsto"]
+[ext_resource type="Resource" uid="uid://w702dxvladin" path="res://assets/star_types/blue_giant.tres" id="4_pkhv0"]
+[ext_resource type="Resource" uid="uid://by58sy2alfk8n" path="res://assets/star_types/class_a.tres" id="5_i358u"]
+[ext_resource type="Resource" uid="uid://s3sq1l63fmff" path="res://assets/star_types/class_b.tres" id="6_s2rys"]
+[ext_resource type="Resource" uid="uid://df1amxsla4bfw" path="res://assets/star_types/class_f.tres" id="7_fc420"]
+[ext_resource type="Resource" uid="uid://dek4gx3nnrvk1" path="res://assets/star_types/class_g.tres" id="8_kc0sw"]
+[ext_resource type="Resource" uid="uid://d4fs0nd50y21u" path="res://assets/star_types/red_dwarf.tres" id="9_fqk1v"]
+[ext_resource type="Resource" uid="uid://d2w88il8g6la6" path="res://assets/star_types/red_giant.tres" id="10_5jdip"]
+[ext_resource type="Resource" uid="uid://rxq534gcu5ae" path="res://assets/star_types/white_dwarf.tres" id="11_3cnnv"]
+[ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="12_pkhv0"]
 
 [sub_resource type="Resource" id="Resource_5gf0t"]
 script = ExtResource("2_dis88")
-galaxy_size = Vector4(30, 1800, 30, 900)
-number_of_stars = 60
-min_dist_between_stars = 40.0
-max_bonus_link_length = 750.0
+galaxy_size = Vector4(30, 1890, 30, 1050)
+number_of_stars = 120
+min_dist_between_stars = 75.0
+max_bonus_link_length = 500.0
+star_types = Array[ExtResource("3_phsto")]([ExtResource("4_pkhv0"), ExtResource("5_i358u"), ExtResource("6_s2rys"), ExtResource("7_fc420"), ExtResource("8_kc0sw"), ExtResource("9_fqk1v"), ExtResource("10_5jdip"), ExtResource("11_3cnnv")])
 star_radius = 6.0
 link_width = 3.0
 metadata/_custom_type_script = "uid://b13nlhuidy8o4"

@@ -16,3 +16,14 @@ res://scripts/utils/galaxy_generation_settings.gd
 res://scripts/galaxy_generation/solarsystem.gd
 res://scripts/galaxy_generation/world.gd
 res://scripts/gameplay_managers/input_manager.gd
+res://scripts/types/star_type.gd
+res://assets/star_types/class_b.tres
+res://assets/star_types/class_a.tres
+res://assets/star_types/class_g.tres
+res://assets/star_types/class_f.tres
+res://assets/star_types/red_dwarf.tres
+res://assets/star_types/red_giant.tres
+res://assets/star_types/blue_giant.tres
+res://assets/star_types/white_dwarf.tres
+res://scripts/types/world_type.gd
+res://assets/world_types/classic.tres
