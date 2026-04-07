@@ -11,6 +11,7 @@ var galaxy : Galaxy
 var game_timer : GameTimer
 var input : InputManager
 
+var use_star_color : bool = true
 var is_paused : bool = true
 
 var galaxy_view : bool = true
@@ -50,7 +51,10 @@ func _draw() -> void:
 			if s.id == focus:
 				draw_circle(s.position,galaxy_generation_settings.star_radius + 5,Color.AQUA,true)
 			else:
-				draw_circle(s.position,galaxy_generation_settings.star_radius,galaxy_generation_settings.star_color,true)
+				if use_star_color:
+					draw_circle(s.position,galaxy_generation_settings.star_radius,s.star.color,true)
+				else:
+					draw_circle(s.position,galaxy_generation_settings.star_radius,galaxy_generation_settings.star_color,true)
 	else:
 		var screen_size = Vector2(DisplayServer.screen_get_size())
 		for world in galaxy.systems[focus].worlds:

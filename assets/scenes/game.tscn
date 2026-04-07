@@ -5,10 +5,11 @@
 
 [sub_resource type="Resource" id="Resource_5gf0t"]
 script = ExtResource("2_dis88")
-galaxy_size = Vector4(30, 1800, 30, 900)
-number_of_stars = 60
-min_dist_between_stars = 40.0
-max_bonus_link_length = 750.0
+galaxy_size = Vector4(30, 1890, 30, 1050)
+number_of_stars = 120
+min_dist_between_stars = 75.0
+bonus_link_percentage = 0.015
+max_bonus_link_length = 500.0
 star_radius = 6.0
 link_width = 3.0
 metadata/_custom_type_script = "uid://b13nlhuidy8o4"
