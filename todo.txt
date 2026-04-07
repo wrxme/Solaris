@@ -1,8 +1,26 @@
 
 priority:
-- fix solar system connection algorithm
-	I feel like it's pretty close to good but it's just feels slightly
-	off you know? could def be more efficient too
+- fix solar system connection algorith
+	I feel like it's pretty close to good for the very specific settings I
+	have it set up on. Changing the number of stars looks really ugly.
+	
+	One thing I don't like is paths that cross over each other.
+	
+	Also sometimes paths lie way too close together. Maybe we could check the
+	angle of the paths and decide not to add them if its too similar to the
+	angle of another path already on that star?
+	
+	It could DEFINITELY be more efficient too!
+	
+	on my device:
+	At 120 systems I'm averaging around 60 ms
+	At 200 systems it's 350 ms
+	At 500 systems it's 4.49 seconds
+	At 750 systems it's 13.88 seconds
+	At 1000 systems it's 35.36 seconds!
+	
+	Ideally, 1000 stars should take under 10 seconds. 🫣
+
 
 other:
 - resource generation
@@ -24,4 +42,6 @@ notes:
 				- Neutron star
 				- pulsar
 			- moons to generate around big planets
+			- asteroid belts
+			- Proto-Planetary-Plasma-Plumes! (young star systems)
 			- binary and trinary systems!?
