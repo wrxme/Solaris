@@ -5,11 +5,11 @@ class_name GalaxyGenerationSettings
 @export var galaxy_size : Vector4
 
 @export_group("Generation")
-@export var number_of_stars : int = 50
-@export var min_dist_between_stars : float = 50.0
+@export var number_of_stars : int = 120
+@export var min_dist_between_stars : float = 75.0
 @export var max_system_connections : int = 4
-@export var bonus_link_percentage : float = 0.03
-@export var max_bonus_link_length : float = 300.0
+@export var bonus_link_percentage : float = 0.015
+@export var max_bonus_link_length : float = 500.0
 
 @export_group("Worlds")
 @export var star_types : Array[StarType]

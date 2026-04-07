@@ -20,10 +20,19 @@ var focus : int = 0
 
 # automatically called by Godot on start :)
 func _ready() -> void:
+	var start_time = Time.get_ticks_usec()
 	# create game components
 	startup_game()
 	
-	print(str(galaxy.systems.size()) + " systems generated")
+	var end_time = Time.get_ticks_usec()
+	var total_time : float = (end_time - start_time)
+	var total_time_ms : float = total_time/1000
+	var total_time_s : float = total_time_ms / 1000
+	
+	if total_time_ms > 10000:
+		print(str(galaxy.systems.size()) + " systems generated in " + str(total_time_s) + " s")
+	else:
+		print(str(galaxy.systems.size()) + " systems generated in " + str(total_time_ms) + " ms")
 	
 	var w := 0
 	var h := 0

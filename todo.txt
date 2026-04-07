@@ -7,39 +7,21 @@ priority:
 other:
 - resource generation
 - empires
-
+- A camera system
+	- It would be better to use Godot's built in Render2D and camera for
+	  rendering. That way in the future we can use sprites and lighting.
+	  I'm not sure how to tackle the rendering of the galaxy vs star systems
+	  view.
+	- Cameras should not exist within the Galaxy
+- Netcode 😱
 
 notes:
-	I'm working on solar system generation right now. In
-	the future I'd like to add systems that can be binary
-	or trinary star systems.
-	Types of stars:
-		- Class B (blue): 
-			- large and hot
-			- good for energy generation
-			- lots of planets, fewer habitable ones
-		- Class A (white):
-			- bright and hot
-			- good for research
-		- Class G (yellow): 
-			- like Sol
-			- highest chance for habitable worlds
-		- Class F (orange):
-			- cooler than G
-		- Class M (red dwarf): 
-			- small and dim
-			- planets close to the star
-		- Red giant:
-			- Large star
-			- few planets, lots of asteroids
-		- Blue giant:
-			- rare
-			- big
-			- lots of planets
-		- White dwarf:
-			- small
-			- planets have lots of minerals
-		- Black hole
-		- Neutron star
-		- pulsar
-		
+	Matt:
+		I'm working on solar system generation right now.
+		TBA:
+			-New star types
+				- Black hole
+				- Neutron star
+				- pulsar
+			- moons to generate around big planets
+			- binary and trinary systems!?

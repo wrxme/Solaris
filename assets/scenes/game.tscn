@@ -28,10 +28,6 @@
 [sub_resource type="Resource" id="Resource_5gf0t"]
 script = ExtResource("2_dis88")
 galaxy_size = Vector4(30, 1890, 30, 1050)
-number_of_stars = 120
-min_dist_between_stars = 75.0
-bonus_link_percentage = 0.015
-max_bonus_link_length = 500.0
 star_types = Array[ExtResource("3_phsto")]([ExtResource("4_pkhv0"), ExtResource("5_i358u"), ExtResource("6_s2rys"), ExtResource("7_fc420"), ExtResource("8_kc0sw"), ExtResource("9_fqk1v"), ExtResource("10_5jdip"), ExtResource("11_3cnnv")])
 world_types = Array[ExtResource("12_pkhv0")]([ExtResource("13_fx2rd"), ExtResource("14_jdjof"), ExtResource("15_h5j7u"), ExtResource("16_8vm3o"), ExtResource("17_p2xyf"), ExtResource("18_xe33q"), ExtResource("19_1q3k2"), ExtResource("20_4hayi"), ExtResource("21_tcehl"), ExtResource("22_c7jqk"), ExtResource("23_3sk60"), ExtResource("24_lx1sk")])
 star_radius = 6.0
