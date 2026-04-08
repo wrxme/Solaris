@@ -7,10 +7,14 @@ Please check `todo.txt` to see features that most need work
 
 ## Changelog
 
+### V0.0.4
+* moons are back baby!
+
 ### V0.0.3
 * updated graphics to HD
 * separated the renderer from the game manager
 * star's type and color now appear on the galaxy map
+* got rid of moons :(
 
 ### V0.0.2
 * **world types** introduced
