@@ -42,3 +42,4 @@ res://assets/world_types/barren.tres
 res://scripts/gameplay_managers/render_manager.gd
 res://game_object.gd
 res://scripts/utils/GameEvents.gd
+res://scripts/empire.gd

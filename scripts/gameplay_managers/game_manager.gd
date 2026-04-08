@@ -18,6 +18,9 @@ var is_paused : bool = true
 var galaxy_view : bool = true
 var focus : int = 0
 
+@export var num_of_empires : int = 5
+var empires : Array[Empire]
+
 # automatically called by Godot on start :)
 func _ready() -> void:
 	var start_time = Time.get_ticks_usec()
@@ -41,9 +44,17 @@ func _ready() -> void:
 			w += 1
 			if j.world_type.planet_zone == WorldType.SpawnZone.HABITABLE:
 				h += 1
+			for m in j.worlds:
+				w += 1
+				if m.type == "Habitable Moon":
+					h += 1
 	
 	print(str(w) + " worlds generated")
 	print(str(h) + " habitable worlds generated")
+	print()
+	
+	for i in empires:
+		print("empire " + str(i.id) + " spawned in system " + str(i.systems[0].id))
 	
 
 func startup_game() -> void:
@@ -66,6 +77,27 @@ func startup_game() -> void:
 		galaxy_generation_settings = GalaxyGenerationSettings.new()
 	galaxy = Galaxy.new(galaxy_generation_settings)
 	add_child(galaxy)
+	
+	# create empires
+	if num_of_empires > galaxy.systems.size():
+		print("cannot have more empires than stars")
+		num_of_empires = galaxy.systems.size()
+	
+	
+	var starting_systems : Array[SolarSystem]
+	for i in range(0,num_of_empires):
+		var starting_system = galaxy.systems[randi_range(0, galaxy.systems.size() - 1)]
+		var guessing = true
+		while guessing:	
+			if starting_system in starting_systems:
+				starting_system = galaxy.systems[randi_range(0, galaxy.systems.size() - 1)]
+			else:
+				guessing = false
+		
+		starting_systems.append(starting_system)
+		var empire = Empire.new(i,starting_system)
+		add_child(empire)
+		empires.append(empire)
 	
 	render = RenderManager.new(self)
 	add_child(render)

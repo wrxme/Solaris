@@ -2,7 +2,6 @@
 extends Node
 class_name GameTimer
 
-signal new_month
 signal new_year
 
 @export var start_time : int = 0
@@ -58,7 +57,7 @@ func _tick():
 	day = (days_left_in_year % 30) + 1
 	
 	if prev_month != month:
-		new_month.emit()
+		GameEvents.new_month.emit()
 	if prev_year	 != year:
 		new_year.emit()
 	
