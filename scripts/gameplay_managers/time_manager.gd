@@ -4,7 +4,6 @@ class_name GameTimer
 
 signal new_month
 signal new_year
-signal tick
 
 @export var start_time : int = 0
 var speed_factor : float = 1.0
@@ -66,7 +65,7 @@ func _tick():
 	if ui:
 		update_ui()
 	
-	tick.emit()
+	GameEvents.tick.emit()
 
 # It is not ideal to have the game time manager directly modify UI.
 # we should eventually create a UI manager that subscribes to the tick signal
@@ -77,3 +76,12 @@ func update_ui():
 
 func handle_pause(is_paused : bool) -> void:
 	is_timer_running = !is_paused
+
+func increase_tick_speed():
+	speed_factor += 1
+
+func decrease_tick_speed():
+	if speed_factor <= 1.0:
+		return
+	
+	speed_factor -= 1

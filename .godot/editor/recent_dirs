@@ -1,8 +1,8 @@
+res://scripts/utils
 res://scripts/gameplay_managers
 res://assets/world_types/
 res://scripts/types
 res://assets/star_types/
 res://scripts/galaxy_generation
-res://scripts/utils
 res://scripts
 res://assets/scenes

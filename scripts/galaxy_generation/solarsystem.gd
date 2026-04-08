@@ -37,6 +37,7 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 	var inner_worlds := fetch_world_types(world_types,WorldType.SpawnZone.INNER)
 	var habitable_worlds := fetch_world_types(world_types,WorldType.SpawnZone.HABITABLE)
 	var frozen_worlds := fetch_world_types(world_types,WorldType.SpawnZone.FROZEN)
+	var moons := fetch_world_types(world_types,WorldType.SpawnZone.MOON)
 	
 	while dist < 10 * star.size:
 		dist += randf_range(45,200)
@@ -57,6 +58,20 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 		var w = World.new(world_type, dist)
 		add_child(w)
 		worlds.append(w)
+		
+		var w_dist = w.size + randf_range(10,20)
+		if w.size > 15:
+			if randf_range(0,1)<0.51:
+				var moon_type = moons[randi_range(0,moons.size()-1)].duplicate()
+				moon_type.size = randf_range(moon_type.size_range[0],moon_type.size_range[1])
+				w.spawn_moon(moon_type,w_dist)
+				
+				w_dist += moon_type.size + randf_range(5,15)
+		if w.size > 20:
+			if randf_range(0,1)<0.51:
+				var moon_type = moons[randi_range(0,moons.size()-1)].duplicate()
+				moon_type.size = randf_range(moon_type.size_range[0],moon_type.size_range[1])
+				w.spawn_moon(moon_type,w_dist)
 
 func fetch_world_types(world_types : Array[WorldType], type : WorldType.SpawnZone) -> Array[WorldType]:
 	var output : Array[WorldType] = []

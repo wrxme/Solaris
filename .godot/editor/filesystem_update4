@@ -40,3 +40,5 @@ res://assets/world_types/tundra.tres
 res://assets/world_types/moon_uninhabitable.tres
 res://assets/world_types/barren.tres
 res://scripts/gameplay_managers/render_manager.gd
+res://game_object.gd
+res://scripts/utils/GameEvents.gd

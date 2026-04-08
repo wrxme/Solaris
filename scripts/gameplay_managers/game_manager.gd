@@ -57,6 +57,8 @@ func startup_game() -> void:
 	
 	# create time controller
 	game_timer = GameTimer.new(time_txt)
+	input.pressed_speed_up.connect(game_timer.increase_tick_speed)
+	input.pressed_slow_down.connect(game_timer.decrease_tick_speed)
 	add_child(game_timer)
 	
 	# generate galaxy
