@@ -19,6 +19,13 @@ var last_tick_time: float = 0.0
 var estimated_tick_duration: float = 0.1
 var time_since_last_tick: float = 0.0
 
+var monthly_food_production : float
+var monthly_food_consumption : float
+var monthly_mineral_production : float
+var monthly_mineral_consumption : float
+var monthly_energy_production : float
+var monthly_energy_consumption : float
+
 func _init(_world_type : WorldType, _distance:float = 0.0) -> void:
 	world_type = _world_type
 	type = world_type.name
@@ -45,6 +52,9 @@ func _init(_world_type : WorldType, _distance:float = 0.0) -> void:
 		last_tick_time = float(Time.get_ticks_msec()) / 1000.0
 		
 		_on_tick()
+		
+		setup_resources()
+		
 
 func _on_tick() -> void:
 	var current_time = float(Time.get_ticks_msec()) / 1000
@@ -78,3 +88,12 @@ func spawn_moon(moon_type : WorldType, dist : float) -> void:
 	var moon = World.new(moon_type, dist)
 	add_child(moon)
 	worlds.append(moon)
+
+func setup_resources():
+	var x = randi_range(0,2)
+	if x == 0:
+		monthly_energy_production = randi_range(1,5)
+	if x == 1:
+		monthly_food_production = randi_range(1,5)
+	if x == 2:
+		monthly_mineral_production = randi_range(1,5)

@@ -23,8 +23,6 @@ priority:
 
 
 other:
-- resource generation
-- empires
 - A camera system
 	- It would be better to use Godot's built in Render2D and camera for
 	  rendering. That way in the future we can use sprites and lighting.

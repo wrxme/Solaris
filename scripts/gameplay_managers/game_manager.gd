@@ -55,7 +55,7 @@ func _ready() -> void:
 	
 	for i in empires:
 		print("empire " + str(i.id) + " spawned in system " + str(i.systems[0].id))
-	
+		
 
 func startup_game() -> void:
 	# create input manger
