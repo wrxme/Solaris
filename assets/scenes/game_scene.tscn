@@ -62,3 +62,13 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UIManager"]
+
+[node name="Label" type="Label" parent="UIManager/CanvasLayer"]
+offset_left = 10.0
+offset_top = 1042.0
+offset_right = 68.0
+offset_bottom = 1070.0
+theme_override_font_sizes/font_size = 20
+text = "V0.0.6"

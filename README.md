@@ -7,10 +7,16 @@ Please check `todo.txt` to see features that most need work
 
 ## Changelog
 
+### V0.0.6
+* new rendering system that supports 
+	* camera movement
+	* planet sprites
+* uses multimeshes to vastly reduce the number of draw calls
+
 ### V0.0.5
-* Empires can spawn, but they don't do much
-* Every world spawns with some resource
-* If an empire owns a system, it gains the system's resources each month
+* empires can spawn, but they don't do much
+* every world spawns with some resource
+* if an empire owns a system, it gains the system's resources each month
 
 ### V0.0.4
 * moons are back baby!

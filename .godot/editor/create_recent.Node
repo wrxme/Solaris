@@ -1,8 +1,9 @@
+Label
+Control
+CanvasLayer
 TextureRect
 Sprite2D
 Node
 MultiMeshInstance2D
 Node2D
 Camera2D
-Control
-Label
