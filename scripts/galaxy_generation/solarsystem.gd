@@ -1,5 +1,5 @@
 # SolarSystem.gd
-extends Node2D
+extends Node
 class_name SolarSystem
 
 # Identifiers
@@ -9,6 +9,7 @@ var star_name : String
 # Properties
 var connections : Array
 var owned_by : int
+var position : Vector2
 
 # Contents
 var worlds : Array

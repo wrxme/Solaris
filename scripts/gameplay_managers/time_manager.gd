@@ -15,8 +15,7 @@ var day : int = 0
 
 var ui : Label
 
-func _init(time_txt : Label = null) -> void:
-	time = start_time
+func _init() -> void:
 	
 	@warning_ignore("integer_division")
 	year = (time / 360) + 2500
@@ -25,10 +24,6 @@ func _init(time_txt : Label = null) -> void:
 	@warning_ignore("integer_division")
 	month = (days_left_in_year / 30) + 1
 	day = (days_left_in_year % 30) + 1
-	
-	if time_txt:
-		ui = time_txt
-		update_ui()
 
 var timer : float = 0.0
 func _process(delta: float):
@@ -61,17 +56,7 @@ func _tick():
 	if prev_year	 != year:
 		new_year.emit()
 	
-	if ui:
-		update_ui()
-	
 	GameEvents.tick.emit()
-
-# It is not ideal to have the game time manager directly modify UI.
-# we should eventually create a UI manager that subscribes to the tick signal
-# and updates the text. The game time manager should only worry about time.
-func update_ui():
-	var output = str(year) + "." + "%02d" % month + "." + "%02d" % day
-	ui.text = output
 
 func handle_pause(is_paused : bool) -> void:
 	is_timer_running = !is_paused

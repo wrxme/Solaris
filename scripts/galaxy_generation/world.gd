@@ -1,7 +1,8 @@
 # world.gd
-extends Node2D
+extends Node
 class_name World
 
+var position : Vector2
 var type : String = "unknown"
 var world_type : WorldType
 var size : float

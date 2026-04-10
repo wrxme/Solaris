@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://bae6qbrkv8pys"]
+
+[ext_resource type="Script" uid="uid://bwwu0n1dqah5q" path="res://scripts/game_scene.gd" id="1_aufxv"]
+[ext_resource type="Script" uid="uid://bhbsx3bfc2ppj" path="res://scripts/gameplay_managers/game_manager.gd" id="1_yot8c"]
+[ext_resource type="Resource" uid="uid://w0lk8m7t2avf" path="res://assets/default_gen_settings.tres" id="2_07fqf"]
+[ext_resource type="Script" uid="uid://d0ixhd8a1juiv" path="res://scripts/gameplay_managers/input_manager.gd" id="3_x1kwt"]
+[ext_resource type="Script" uid="uid://bdbmpyamo5xbe" path="res://scripts/gameplay_managers/render_manager.gd" id="5_jd8xj"]
+[ext_resource type="Script" uid="uid://6sasg3bc0aiu" path="res://scripts/galaxy_view.gd" id="6_ve6l2"]
+[ext_resource type="Script" uid="uid://pak035hyi6n5" path="res://scripts/system_view.gd" id="7_ve6l2"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ve6l2"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_8ycl6"]
+use_colors = true
+mesh = SubResource("QuadMesh_ve6l2")
+
+[sub_resource type="QuadMesh" id="QuadMesh_jd8xj"]
+size = Vector2(10, 10)
+
+[sub_resource type="MultiMesh" id="MultiMesh_jd8xj"]
+use_colors = true
+mesh = SubResource("QuadMesh_jd8xj")
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_aufxv")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_yot8c")
+galaxy_generation_settings = ExtResource("2_07fqf")
+
+[node name="Player" type="Node" parent="."]
+
+[node name="InputManager" type="Node" parent="."]
+script = ExtResource("3_x1kwt")
+
+[node name="RenderManager" type="Node2D" parent="."]
+script = ExtResource("5_jd8xj")
+
+[node name="GalaxyView" type="Node2D" parent="RenderManager"]
+script = ExtResource("6_ve6l2")
+
+[node name="Camera2D" type="Camera2D" parent="RenderManager/GalaxyView"]
+visibility_layer = 2
+anchor_mode = 0
+
+[node name="Connections" type="MultiMeshInstance2D" parent="RenderManager/GalaxyView"]
+multimesh = SubResource("MultiMesh_8ycl6")
+
+[node name="Worlds" type="MultiMeshInstance2D" parent="RenderManager/GalaxyView"]
+visibility_layer = 2
+multimesh = SubResource("MultiMesh_jd8xj")
+
+[node name="SystemView" type="Node2D" parent="RenderManager"]
+script = ExtResource("7_ve6l2")
+
+[node name="Camera2D" type="Camera2D" parent="RenderManager/SystemView"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Objects" type="Node2D" parent="RenderManager/SystemView"]
+
+[node name="UIManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -43,3 +43,8 @@ res://scripts/gameplay_managers/render_manager.gd
 res://game_object.gd
 res://scripts/utils/GameEvents.gd
 res://scripts/empire.gd
+res://assets/scenes/game_scene.tscn
+res://scripts/game_scene.gd
+res://scripts/galaxy_view.gd
+res://scripts/system_view.gd
+res://scripts/render_object.gd
