@@ -1,8 +1,6 @@
 extends Node2D
 
 @onready var parent = $".."
-
-@onready var mesh = $Worlds
 @onready var connection_mesh = $Connections
 @onready var cam = $Camera2D
 
@@ -10,21 +8,43 @@ func render(_system):
 	cam.make_current()
 
 func instantiate_galaxy_map(galaxy : Galaxy) -> void:
-	var stars = galaxy.systems
 	var connections = galaxy.connections
 	
-	# Stars
-	mesh.multimesh.instance_count = stars.size()
-	
-	for i in range(stars.size()):
-		var star = stars[i]
-
-		var t = Transform2D(0, star.position)
-		mesh.multimesh.set_instance_transform_2d(i, t)
+	# stars
+	var groups := {}
+	for system in galaxy.systems:
+		var type = system.worlds[0].type
 		
-		var color = star.worlds[0].color
-		mesh.multimesh.set_instance_color(i, color)
+		if type not in groups:
+			groups[type] = []
+		
+		groups[type].append(system)
 	
+	for type in groups:
+		var stars = groups[type]
+		
+		var mesh = MultiMeshInstance2D.new()
+		mesh.texture = stars[0].worlds[0].world_type.sprite
+		
+		var multimesh = MultiMesh.new()
+		mesh.multimesh = multimesh
+		multimesh.use_colors = true
+		multimesh.mesh = QuadMesh.new()
+		multimesh.mesh.size.x = 30.0
+		multimesh.mesh.size.y = 30.0
+		
+		multimesh.instance_count = stars.size()
+		
+		for i in range(stars.size()):
+			var star = stars[i]
+
+			var t = Transform2D(0, star.position)
+			multimesh.set_instance_transform_2d(i, t)
+			
+			#var color = star.worlds[0].color
+			multimesh.set_instance_color(i, Color.WHITE)
+		
+		add_child(mesh)
 	
 	# Connections
 	var line_multimesh = connection_mesh.multimesh

@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="StarType" load_steps=2 format=3 uid="uid://by58sy2alfk8n"]
+[gd_resource type="Resource" script_class="StarType" load_steps=3 format=3 uid="uid://by58sy2alfk8n"]
 
 [ext_resource type="Script" uid="uid://c0n7xbpmoevwv" path="res://scripts/types/star_type.gd" id="1_we6r0"]
+[ext_resource type="Texture2D" uid="uid://bnmbc1uoudp8t" path="res://assets/placeholder assets/stars/white.png" id="2_wmr6k"]
 
 [resource]
 script = ExtResource("1_we6r0")
 luminosity = 5.0
-scortch_zone_size = 80
 inner_zone_size = 60
 habitable_zone_size = 100
 name = "Class A"
 size_range = Vector2(30, 35)
 color = Color(1, 1, 1, 1)
+sprite = ExtResource("2_wmr6k")
 metadata/_custom_type_script = "uid://c0n7xbpmoevwv"

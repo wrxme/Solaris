@@ -1,37 +1,74 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775538152
-README.md::TextFile::-1::1775514384::0::1::::<><><>0<>0<><>::
-todo.txt::TextFile::-1::1775514384::0::1::::<><><>0<>0<><>::
-::res://assets/::1775528140
+::res://::1775794185
+README.md::TextFile::-1::1775716304::0::1::::<><><>0<>0<><>::
+todo.txt::TextFile::-1::1775714923::0::1::::<><><>0<>0<><>::
+::res://assets/::1775792503
+default_gen_settings.tres::Resource/GalaxyGenerationSettings::1596451502036280535::1775785553::0::1::::<><><>0<>0<><>::uid://b13nlhuidy8o4::::res://scripts/utils/galaxy_generation_settings.gd<>uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://w702dxvladin::::res://assets/star_types/blue_giant.tres<>uid://by58sy2alfk8n::::res://assets/star_types/class_a.tres<>uid://s3sq1l63fmff::::res://assets/star_types/class_b.tres<>uid://df1amxsla4bfw::::res://assets/star_types/class_f.tres<>uid://dek4gx3nnrvk1::::res://assets/star_types/class_g.tres<>uid://d4fs0nd50y21u::::res://assets/star_types/red_dwarf.tres<>uid://d2w88il8g6la6::::res://assets/star_types/red_giant.tres<>uid://rxq534gcu5ae::::res://assets/star_types/white_dwarf.tres<>uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://cu32ufyyvxdme::::res://assets/world_types/arctic.tres<>uid://bet6fofqn6s4m::::res://assets/world_types/barren.tres<>uid://ca8pg5tncckj5::::res://assets/world_types/continental.tres<>uid://dhudkg0lgwu21::::res://assets/world_types/desert.tres<>uid://cmbvon2x1i2qx::::res://assets/world_types/gas_giant.tres<>uid://cmc7itggtrfgk::::res://assets/world_types/molten.tres<>uid://ok3r32j6whgk::::res://assets/world_types/moon_habitable.tres<>uid://buek5jiqt3l3x::::res://assets/world_types/moon_uninhabitable.tres<>uid://clw60ef58anvi::::res://assets/world_types/ocean.tres<>uid://tlc1kk44ue8s::::res://assets/world_types/savannah.tres<>uid://bxlacpjg8tbut::::res://assets/world_types/tropical.tres<>uid://yjdeosd30yrv::::res://assets/world_types/tundra.tres
 icon.svg::CompressedTexture2D::1790880795757653::1774395159::1775354263::1::::<><><>0<>0<>5676ce2c411be9ad977b18d51acc8825<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
-::res://assets/scenes/::1775537253
-game.tscn::PackedScene::6001391850610972010::1775537253::0::1::::<><><>0<>0<><>::uid://bhbsx3bfc2ppj::::res://scripts/gameplay_managers/game_manager.gd<>uid://b13nlhuidy8o4::::res://scripts/utils/galaxy_generation_settings.gd<>uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://w702dxvladin::::res://assets/star_types/blue_giant.tres<>uid://by58sy2alfk8n::::res://assets/star_types/class_a.tres<>uid://s3sq1l63fmff::::res://assets/star_types/class_b.tres<>uid://df1amxsla4bfw::::res://assets/star_types/class_f.tres<>uid://dek4gx3nnrvk1::::res://assets/star_types/class_g.tres<>uid://d4fs0nd50y21u::::res://assets/star_types/red_dwarf.tres<>uid://d2w88il8g6la6::::res://assets/star_types/red_giant.tres<>uid://rxq534gcu5ae::::res://assets/star_types/white_dwarf.tres<>uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://exujmpgew72d::::res://assets/world_types/classic.tres
-::res://assets/star_types/::1775527879
-blue_giant.tres::Resource/StarType::1611780983490618425::1775526593::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-class_a.tres::Resource/StarType::4134921370964284591::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-class_b.tres::Resource/StarType::1322324625216609767::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-class_f.tres::Resource/StarType::7563902756746341644::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-class_g.tres::Resource/StarType::7462433962625989946::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-red_dwarf.tres::Resource/StarType::9206198644905371588::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-red_giant.tres::Resource/StarType::9101840170543915395::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-white_dwarf.tres::Resource/StarType::1241717591620573756::1775527879::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd
-::res://assets/world_types/::1775538152
-barren.tres::Resource/WorldType::2708291135114154678::1775538098::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
-classic.tres::Resource/WorldType::329467128627106185::1775529037::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
-desert.tres::Resource/WorldType::7692071874812981424::1775538098::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
-te.tres::Resource/WorldType::5621194484181632610::1775538045::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
-::res://scripts/::1775523442
-::res://scripts/galaxy_generation/::1775537739
-galaxy.gd::GDScript::2454625925318953968::1775528330::0::1::::Galaxy<>Node2D<><>0<>0<><>::
-solarsystem.gd::GDScript::998482902795867001::1775534237::0::1::::SolarSystem<>Node2D<><>0<>0<><>::
-world.gd::GDScript::833088487222904543::1775537739::0::1::::World<>Node2D<><>0<>0<><>::
-::res://scripts/gameplay_managers/::1775512596
-game_manager.gd::GDScript::2880942418472533787::1775512332::0::1::::GameManager<>Node2D<><>0<>0<><>::
-input_manager.gd::GDScript::8931907364037271965::1775512596::0::1::::InputManager<>Node<><>0<>0<><>::
-time_manager.gd::GDScript::8609259449219592516::1775449053::0::1::::GameTimer<>Node<><>0<>0<><>::
-::res://scripts/types/::1775537552
-star_type.gd::GDScript::6556383462427660693::1775537552::0::1::::StarType<>WorldType<><>0<>0<><>::
-world_type.gd::GDScript::6168989924146524656::1775528580::0::1::::WorldType<>Resource<><>0<>0<><>::
-::res://scripts/utils/::1775528330
-galaxy_generation_settings.gd::GDScript::4269942558962548333::1775528330::0::1::::GalaxyGenerationSettings<>Resource<><>0<>0<><>::
+::res://assets/placeholder assets/::1775793253
+bg.png::CompressedTexture2D::5323527468895853001::1775790622::1775790633::1::::<><><>0<>0<>5b44c10483dbb1e56972459193c01e70<>res://.godot/imported/bg.png-6cab3d6ae65e82dad36683ad164a7ff1.ctex::
+::res://assets/placeholder assets/planets/::1775794771
+barren.png::CompressedTexture2D::791334125731077202::1775793829::1775793836::1::::<><><>0<>0<>79ac2a1ed66c55028b69cce490320208<>res://.godot/imported/barren.png-3cde5186577b6bfc3d63a104ab6e0804.ctex::
+continental.png::CompressedTexture2D::3388663880873973684::1775793909::1775793923::1::::<><><>0<>0<>35e3a59bc964e74aca0af392753c2127<>res://.godot/imported/continental.png-b13406502510f2006706d1ccf08cfe36.ctex::
+desert.png::CompressedTexture2D::3605027383128477974::1775793966::1775793967::1::::<><><>0<>0<>1a1314c3ce9b556e1b8addb68b90e1d3<>res://.godot/imported/desert.png-bc39a77e41232df20b873af98abefbb7.ctex::
+gas.png::CompressedTexture2D::1028284303344510125::1775794030::1775794032::1::::<><><>0<>0<>4ba0396c602eb73861a27cf9b1278ecb<>res://.godot/imported/gas.png-b5537f73dc4d71a61d663b5e72825a75.ctex::
+jungo.png::CompressedTexture2D::2976815602375695263::1775794727::1775794728::1::::<><><>0<>0<>bd234655a5096a5476ab5bb0d5378579<>res://.godot/imported/jungo.png-026e329fb9b543e78f18053f10a45a94.ctex::
+molten.png::CompressedTexture2D::7560539918967981163::1775794079::1775794083::1::::<><><>0<>0<>5948758d9281f3b775a174282e7b100a<>res://.godot/imported/molten.png-56f7b78c12138074bcc087fb6713660f.ctex::
+moon_hab.png::CompressedTexture2D::5540898104243537748::1775794176::1775794185::1::::<><><>0<>0<>07c7c05c3b5d371526dc5e7f8d546007<>res://.godot/imported/moon_hab.png-ad08e8c7c81443ae1a4793230c1d5144.ctex::
+moon_unhab.png::CompressedTexture2D::4097912839726300433::1775794125::1775794182::1::::<><><>0<>0<>887b2edec3fa3be34f13615a64ee02dd<>res://.godot/imported/moon_unhab.png-ea1ab3201e248fd3353e807271281658.ctex::
+ocean.png::CompressedTexture2D::7353218028558328633::1775793919::1775793923::1::::<><><>0<>0<>ea4a2730f3f785e0cb7075bbbe987773<>res://.godot/imported/ocean.png-b60e2bc607af52e9a72a386a05c54065.ctex::
+savannah.png::CompressedTexture2D::3422571092544070868::1775794673::1775794676::1::::<><><>0<>0<>1bfd94c78b0b8b323e76cf2ccd4b9e28<>res://.godot/imported/savannah.png-51290e0c2efec0aa12b55b1145108f9a.ctex::
+snowy.png::CompressedTexture2D::7391320250603572809::1775793260::1775793270::1::::<><><>0<>0<>206f172dba53659dca7ac399de212ab3<>res://.godot/imported/snowy.png-20bc8e4df45cfb8c85c77c92c91b096c.ctex::
+tund.png::CompressedTexture2D::2367283611700958762::1775794771::1775794774::1::::<><><>0<>0<>27bda6d67c4947ff8e430721494f0810<>res://.godot/imported/tund.png-05a1c1a54b69d45d8989295fff203bca.ctex::
+::res://assets/placeholder assets/stars/::1775793044
+blue.png::CompressedTexture2D::1809820130621825373::1775793039::1775793044::1::::<><><>0<>0<>2e6370905654d7e14db7cc8eb9f95504<>res://.godot/imported/blue.png-38a3c6ff2db271ff03af7d7f0ce59162.ctex::
+orange.png::CompressedTexture2D::2302359796543788184::1775792985::1775793044::1::::<><><>0<>0<>95eda479d80ce4e42fc15b07aa4e515c<>res://.godot/imported/orange.png-278e4151f598515bb52a26ae7ede428b.ctex::
+red.png::CompressedTexture2D::3688077150230587833::1775792964::1775793044::1::::<><><>0<>0<>4b13285dcd1324810ac165bc4f2ef9ba<>res://.godot/imported/red.png-4202f11667f22597c1ee9bb9c61ff028.ctex::
+white.png::CompressedTexture2D::3323713869782966729::1775792934::1775793044::1::::<><><>0<>0<>92957162ad647e6895f43316f4abeb38<>res://.godot/imported/white.png-075c35d75e7831e98888fee35483affa.ctex::
+yellow.png::CompressedTexture2D::6320570218273833673::1775793021::1775793044::1::::<><><>0<>0<>e58718cd317c32939af04721bd0bf9d9<>res://.godot/imported/yellow.png-bd19cda760f466189a7b2614b223d3e9.ctex::
+::res://assets/scenes/::1775794205
+game_scene.tscn::PackedScene::2396589073456336598::1775794205::0::1::::<><><>0<>0<><>::uid://bwwu0n1dqah5q::::res://scripts/game_scene.gd<>uid://bhbsx3bfc2ppj::::res://scripts/gameplay_managers/game_manager.gd<>uid://w0lk8m7t2avf::::res://assets/default_gen_settings.tres<>uid://d0ixhd8a1juiv::::res://scripts/gameplay_managers/input_manager.gd<>uid://bdbmpyamo5xbe::::res://scripts/gameplay_managers/render_manager.gd<>uid://6sasg3bc0aiu::::res://scripts/galaxy_view.gd<>uid://pak035hyi6n5::::res://scripts/system_view.gd<>uid://ch30yp5s8n810::::res://assets/placeholder assets/bg.png
+::res://assets/star_types/::1775793120
+blue_giant.tres::Resource/StarType::1611780983490618425::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://01xqc7bcuqjl::::res://assets/placeholder assets/stars/blue.png
+class_a.tres::Resource/StarType::4134921370964284591::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://bnmbc1uoudp8t::::res://assets/placeholder assets/stars/white.png
+class_b.tres::Resource/StarType::1322324625216609767::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://01xqc7bcuqjl::::res://assets/placeholder assets/stars/blue.png
+class_f.tres::Resource/StarType::7563902756746341644::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://72jsacj7q3ai::::res://assets/placeholder assets/stars/orange.png
+class_g.tres::Resource/StarType::7462433962625989946::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://cwby4rp06wxg8::::res://assets/placeholder assets/stars/yellow.png
+red_dwarf.tres::Resource/StarType::9206198644905371588::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://bsssdefjbqi2t::::res://assets/placeholder assets/stars/red.png
+red_giant.tres::Resource/StarType::9101840170543915395::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://bsssdefjbqi2t::::res://assets/placeholder assets/stars/red.png
+white_dwarf.tres::Resource/StarType::1241717591620573756::1775793120::0::1::::<><><>0<>0<><>::uid://c0n7xbpmoevwv::::res://scripts/types/star_type.gd<>uid://bnmbc1uoudp8t::::res://assets/placeholder assets/stars/white.png
+::res://assets/world_types/::1775794205
+arctic.tres::Resource/WorldType::6236096192754793776::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://ddkn72ej48le4::::res://assets/placeholder assets/planets/snowy.png
+barren.tres::Resource/WorldType::2708291135114154678::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://ljlfl83vovs1::::res://assets/placeholder assets/planets/barren.png
+continental.tres::Resource/WorldType::4841888908570312968::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://bojq2fw85hddk::::res://assets/placeholder assets/planets/continental.png
+desert.tres::Resource/WorldType::7692071874812981424::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://brmkjldbw5sxq::::res://assets/placeholder assets/planets/desert.png
+gas_giant.tres::Resource/WorldType::5618472652352791587::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://owdxsh4y0mkb::::res://assets/placeholder assets/planets/gas.png
+molten.tres::Resource/WorldType::5621194484181632610::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://dfym8t7yp33fb::::res://assets/placeholder assets/planets/molten.png
+moon_habitable.tres::Resource/WorldType::1005019535581636850::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://ck7b1ujhslyoa::::res://assets/placeholder assets/planets/moon_hab.png
+moon_uninhabitable.tres::Resource/WorldType::3799116297036857355::1775794205::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd<>uid://ck7b1ujhslyoa::::res://assets/placeholder assets/planets/moon_hab.png
+ocean.tres::Resource/WorldType::5592262048841856406::1775542251::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
+savannah.tres::Resource/WorldType::1356464591083051540::1775542251::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
+tropical.tres::Resource/WorldType::4023476616321265383::1775542251::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
+tundra.tres::Resource/WorldType::1703301704561350303::1775542251::0::1::::<><><>0<>0<><>::uid://ct5kmllr4nuls::::res://scripts/types/world_type.gd
+::res://scripts/::1775794551
+empire.gd::GDScript::8056560257295938755::1775714945::0::1::::Empire<>Node<><>0<>0<><>::
+galaxy_view.gd::GDScript::2213045455086083500::1775792419::0::1::::<>Node2D<><>0<>0<><>::
+game_scene.gd::GDScript::3977251262148243720::1775776372::0::1::::<>Node<><>0<>0<><>::
+render_object.gd::GDScript::5136718923707862824::1775794551::0::1::::RenderObject<>Sprite2D<><>0<>0<><>::
+system_view.gd::GDScript::1053485986694180084::1775768791::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/galaxy_generation/::1775794273
+galaxy.gd::GDScript::2454625925318953968::1775716304::0::1::::Galaxy<>Node<><>0<>0<><>::
+solarsystem.gd::GDScript::998482902795867001::1775794273::0::1::::SolarSystem<>Node<><>0<>0<><>::
+world.gd::GDScript::833088487222904543::1775793372::0::1::::World<>Node<><>0<>0<><>::
+::res://scripts/gameplay_managers/::1775764373
+game_manager.gd::GDScript::2880942418472533787::1775719491::0::1::::GameManager<>Node<><>0<>0<><>::
+input_manager.gd::GDScript::8931907364037271965::1775719603::0::1::::InputManager<>Node<><>0<>0<><>::
+render_manager.gd::GDScript::2599808244308571986::1775764373::0::1::::RenderManager<>Node2D<><>0<>0<><>::
+time_manager.gd::GDScript::8609259449219592516::1775717230::0::1::::GameTimer<>Node<><>0<>0<><>::
+::res://scripts/types/::1775785131
+star_type.gd::GDScript::6556383462427660693::1775601623::0::1::::StarType<>WorldType<><>0<>0<><>::
+world_type.gd::GDScript::6168989924146524656::1775785131::0::1::::WorldType<>Resource<><>0<>0<><>::
+::res://scripts/utils/::1775714945
+galaxy_generation_settings.gd::GDScript::4269942558962548333::1775543529::0::1::::GalaxyGenerationSettings<>Resource<><>0<>0<><>::
+GameEvents.gd::GDScript::8779566362891154496::1775714945::0::1::::<>Node<><>0<>0<><>::
 union.gd::GDScript::5026681603161264225::1775433737::0::1::::Union<>Node<><>0<>0<><>::

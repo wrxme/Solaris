@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://dhudkg0lgwu21"]
+[gd_resource type="Resource" script_class="WorldType" load_steps=3 format=3 uid="uid://dhudkg0lgwu21"]
 
 [ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_xuxv7"]
+[ext_resource type="Texture2D" uid="uid://brmkjldbw5sxq" path="res://assets/placeholder assets/planets/desert.png" id="2_45vys"]
 
 [resource]
 script = ExtResource("1_xuxv7")
 name = "Desert"
 size_range = Vector2(10, 15)
 color = Color(0.9434088, 0.7427136, 0.363164, 1)
+sprite = ExtResource("2_45vys")
 planet_zone = 1
 metadata/_custom_type_script = "uid://ct5kmllr4nuls"

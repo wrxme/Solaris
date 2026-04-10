@@ -13,4 +13,5 @@ enum SpawnZone {
 @export var size_range := Vector2(15,45)
 var size : float
 @export var color := Color.YELLOW
+@export var sprite : Texture2D
 @export var planet_zone : SpawnZone = SpawnZone.HABITABLE

@@ -8,6 +8,7 @@ var world_type : WorldType
 var size : float
 var distance_from_center : float
 var color : Color = Color.DEEP_SKY_BLUE
+var sprite : Texture2D
 var speed := 50.0
 var angle : float = 0.0
 var radius : float = 0.0
@@ -31,6 +32,7 @@ func _init(_world_type : WorldType, _distance:float = 0.0) -> void:
 	world_type = _world_type
 	type = world_type.name
 	size = world_type.size
+	sprite = world_type.sprite
 	
 	distance_from_center = _distance
 	position = Vector2(distance_from_center, 0)

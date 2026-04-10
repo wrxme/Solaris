@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="WorldType" load_steps=2 format=3 uid="uid://buek5jiqt3l3x"]
+[gd_resource type="Resource" script_class="WorldType" load_steps=3 format=3 uid="uid://buek5jiqt3l3x"]
 
 [ext_resource type="Script" uid="uid://ct5kmllr4nuls" path="res://scripts/types/world_type.gd" id="1_c471v"]
+[ext_resource type="Texture2D" uid="uid://ck7b1ujhslyoa" path="res://assets/placeholder assets/planets/moon_hab.png" id="2_rsle7"]
 
 [resource]
 script = ExtResource("1_c471v")
 name = "Habitable Moon"
 size_range = Vector2(3, 8)
 color = Color(0.33895516, 0.3596636, 0.34800842, 1)
+sprite = ExtResource("2_rsle7")
 planet_zone = 4
 metadata/_custom_type_script = "uid://ct5kmllr4nuls"
