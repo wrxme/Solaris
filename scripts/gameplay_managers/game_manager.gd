@@ -2,6 +2,8 @@
 extends Node
 class_name GameManager
 
+signal game_set
+
 @export var galaxy_generation_settings : GalaxyGenerationSettings
 @onready var input : InputManager = $"../InputManager"
 
@@ -48,6 +50,8 @@ func startup() -> void:
 		var empire = Empire.new(i,starting_system)
 		add_child(empire)
 		empires.append(empire)
+	
+	game_set.emit()
 
 func on_pause_pressed() -> void:
 	is_paused = !is_paused

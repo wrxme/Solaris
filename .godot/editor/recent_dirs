@@ -1,8 +1,9 @@
+res://scripts/ui
+res://scripts/gameplay_managers
 res://scripts
 res://assets
 res://assets/scenes
 res://scripts/utils
-res://scripts/gameplay_managers
 res://assets/world_types/
 res://scripts/types
 res://assets/star_types/

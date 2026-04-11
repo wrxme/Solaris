@@ -49,3 +49,5 @@ res://scripts/galaxy_view.gd
 res://scripts/system_view.gd
 res://scripts/render_object.gd
 res://assets/default_gen_settings.tres
+res://scripts/gameplay_managers/player_manager.gd
+res://scripts/ui/timer.gd

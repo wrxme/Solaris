@@ -23,7 +23,7 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 	# Create the star
 	var star_type : StarType = star_types[randi_range(0,star_types.size() - 1)].duplicate()
 	star_type.size = 1.5 * randf_range(star_type.size_range[0],star_type.size_range[1])
-	star = World.new(star_type)
+	star = World.new(star_type, self)
 	add_child(star)
 	worlds.append(star)
 	
@@ -56,7 +56,7 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 		
 		world_type.size = randf_range(world_type.size_range[0],world_type.size_range[1])
 		dist += world_type.size
-		var w = World.new(world_type, dist)
+		var w = World.new(world_type, self, dist)
 		add_child(w)
 		worlds.append(w)
 		
@@ -65,7 +65,7 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 			if randf_range(0,1)<0.51:
 				var moon_type = moons[randi_range(0,moons.size()-1)].duplicate()
 				moon_type.size = randf_range(moon_type.size_range[0],moon_type.size_range[1])
-				w.spawn_moon(moon_type,w_dist)
+				w.spawn_moon(moon_type,self,w_dist)
 				
 				w_dist += moon_type.size + randf_range(5,15)
 		if w.size > 20:
@@ -73,7 +73,7 @@ func generate_system(star_types : Array[StarType], world_types : Array[WorldType
 				var moon_type = moons[randi_range(0,moons.size()-1)].duplicate()
 				moon_type.size = randf_range(moon_type.size_range[0],moon_type.size_range[1])
 				w_dist += moon_type.size
-				w.spawn_moon(moon_type,w_dist)
+				w.spawn_moon(moon_type,self,w_dist)
 
 func fetch_world_types(world_types : Array[WorldType], type : WorldType.SpawnZone) -> Array[WorldType]:
 	var output : Array[WorldType] = []

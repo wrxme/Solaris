@@ -13,6 +13,9 @@ var speed := 50.0
 var angle : float = 0.0
 var radius : float = 0.0
 
+var owned_by : Empire
+var system : SolarSystem
+
 var worlds : Array
 var target_position: Vector2 = Vector2.ZERO
 var previous_position: Vector2 = Vector2.ZERO
@@ -28,11 +31,12 @@ var monthly_mineral_consumption : float
 var monthly_energy_production : float
 var monthly_energy_consumption : float
 
-func _init(_world_type : WorldType, _distance:float = 0.0) -> void:
+func _init(_world_type : WorldType, _system : SolarSystem, _distance:float = 0.0) -> void:
 	world_type = _world_type
 	type = world_type.name
 	size = world_type.size
 	sprite = world_type.sprite
+	system = _system
 	
 	distance_from_center = _distance
 	position = Vector2(distance_from_center, 0)
@@ -57,7 +61,6 @@ func _init(_world_type : WorldType, _distance:float = 0.0) -> void:
 		_on_tick()
 		
 		setup_resources()
-		
 
 func _on_tick() -> void:
 	var current_time = float(Time.get_ticks_msec()) / 1000
@@ -87,8 +90,8 @@ func _process(delta: float) -> void:
 	
 	position = previous_position.lerp(target_position, weight)
 
-func spawn_moon(moon_type : WorldType, dist : float) -> void:
-	var moon = World.new(moon_type, dist)
+func spawn_moon(moon_type : WorldType, _system : SolarSystem, dist : float) -> void:
+	var moon = World.new(moon_type, _system, dist)
 	add_child(moon)
 	worlds.append(moon)
 

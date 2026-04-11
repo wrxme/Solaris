@@ -1,6 +1,8 @@
 extends Node2D
 class_name RenderManager
 
+signal clicked_world(world : World)
+
 const SELECT_RADIUS = 15.0 
 
 @onready var galaxy_view = $GalaxyView
@@ -19,9 +21,12 @@ func startup(_game : GameManager, g_input : InputManager):
 	var galaxy = game.galaxy
 	galaxy_view.instantiate_galaxy_map(galaxy)
 	
+	selected_system = galaxy.systems[0]
 	active_view = galaxy_view
 	
 	input.pressed_enter.connect(switch_view)
+	
+	system_view.clicked_world.connect(on_clicked_world)
 
 func _process(delta: float) -> void:
 	var motion = input.input.normalized() * delta * 150
@@ -46,6 +51,8 @@ func _input(event):
 		
 		active_view.on_click(mouse_pos)
 
+func on_clicked_world(world) -> void:
+	clicked_world.emit(world)
 #
 #var game : GameManager
 #

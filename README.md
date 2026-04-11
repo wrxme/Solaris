@@ -7,11 +7,19 @@ Please check `todo.txt` to see features that most need work
 
 ## Changelog
 
+### V0.0.7
+* players can now interact with their empires
+* clicking on a world will claim that world if:
+	* the empire owns the star and
+	* the star or planet is not already owned
+
 ### V0.0.6
 * new rendering system that supports 
 	* camera movement
 	* planet sprites
 * uses multimeshes to vastly reduce the number of draw calls
+* system views are appended when needed and destroyed when a
+  different system is selected
 
 ### V0.0.5
 * empires can spawn, but they don't do much

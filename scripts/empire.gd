@@ -37,8 +37,30 @@ func claim_system(system : SolarSystem):
 	systems.append(system)
 	
 	# Claim the star
-	system.worlds[0].owned_by = id
+	system.worlds[0].owned_by = self
 	worlds.append(system.worlds[0])
+
+func claim_world(world : World):
+	var system = world.system
+	
+	# check if system is already owned
+	if system in systems:
+		if world in worlds:
+			print("world already owned")
+		else:
+			print("adding world to empire!")
+			worlds.append(world)
+	
+	# if system is not owned
+	else:
+		if world == system.worlds[0]:
+			if world.owned_by == null:
+				print("claiming system")
+				claim_system(system)
+			else:
+				print("cannot claim another empire's world")
+		else:
+			print("cannot claim world if system is not owned")
 
 func update_monthly_resources():
 	monthly_energy = 0
